@@ -22,16 +22,21 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'DM Sans', system-ui, sans-serif; }
+    .term-card { transition: all 0.18s ease; }
+    .term-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,0.10); }
+    .letter-anchor { scroll-margin-top: 80px; }
+    .letter-btn.active { background: #1d4ed8; }
   </style>
 </head>
 <body class="bg-surface text-gray-800 antialiased min-h-screen flex flex-col">
+
   <!-- Header -->
   <header class="bg-white border-b border-gray-200/80 sticky top-0 z-50 shadow-sm">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
-      <a href="index.html" class="text-xl font-bold text-accent tracking-tight">AI & Agentic Workflow ABC</a>
-      <nav class="flex items-center gap-1 sm:gap-2" aria-label="Alfabetnavigatie">
-        <a href="index.html#alfabet" class="text-sm text-gray-600 hover:text-accent font-medium">Alfabet</a>
-        <a href="termen/agentic-workflow.html" class="text-sm text-gray-600 hover:text-accent font-medium">Termen</a>
+      <a href="#" class="text-xl font-bold text-accent tracking-tight">AI & Agentic Workflow ABC</a>
+      <nav class="flex items-center gap-1 sm:gap-2" aria-label="Navigatie">
+        <a href="#alfabet" class="text-sm text-gray-600 hover:text-accent font-medium">Alfabet</a>
+        <a href="#woordenboek" class="text-sm text-gray-600 hover:text-accent font-medium">Woordenboek</a>
       </nav>
     </div>
   </header>
@@ -39,63 +44,818 @@
   <!-- Hero -->
   <section class="bg-white border-b border-gray-200/80">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
+      <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-3 py-1 text-xs font-semibold text-accent mb-5">
+        ✦ 50+ begrippen — bijgewerkt 2025
+      </div>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight">
-        AI begrijpelijk maken voor iedereen
+        AI begrijpelijk maken<br class="hidden sm:block"> voor iedereen
       </h1>
       <p class="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl leading-relaxed">
-        Welkom bij het AI & Agentic Workflow ABC. Hier vind je heldere uitleg van begrippen rond kunstmatige intelligentie en agent-gebaseerde workflows — zonder jargon, met voorbeelden en analogieën.
+        Welkom bij het AI & Agentic Workflow ABC. Heldere uitleg van 50+ begrippen rond kunstmatige intelligentie en agent-gebaseerde workflows — zonder jargon, gericht op ondernemers.
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href="index.html#alfabet" class="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white font-medium rounded-lg hover:bg-accent-dark transition-colors">
+        <a href="#alfabet" class="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white font-medium rounded-lg hover:bg-accent-dark transition-colors">
           Bekijk het alfabet
         </a>
-        <a href="termen/agentic-workflow.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-dark text-gray-700 font-medium rounded-lg border border-gray-200 hover:border-accent hover:text-accent transition-colors">
-          Agentic Workflow (A)
+        <a href="#woordenboek" class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-dark text-gray-700 font-medium rounded-lg border border-gray-200 hover:border-accent hover:text-accent transition-colors">
+          Naar het woordenboek
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Alphabet navigation -->
+  <!-- Alphabet Navigation -->
   <section id="alfabet" class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
     <h2 class="text-xl font-semibold text-gray-900 mb-4">Termen per letter</h2>
-    <p class="text-gray-600 mb-6 max-w-2xl">Kies een letter om termen te bekijken. Nieuwe termen worden regelmatig toegevoegd.</p>
+    <p class="text-gray-600 mb-6 max-w-2xl">Klik op een letter om direct naar die sectie te springen.</p>
     <nav class="flex flex-wrap gap-2 sm:gap-3" aria-label="Alfabet A–Z">
-      <a href="termen/agentic-workflow.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">A</a>
-      <a href="termen/bias.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">B</a>
-      <a href="termen/context-window.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">C</a>
-      <a href="termen/deepfake.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">D</a>
-      <a href="termen/embeddings.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">E</a>
-      <a href="termen/fine-tuning.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">F</a>
-      <a href="termen/gpu.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">G</a>
-      <a href="termen/hallucinatie.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">H</a>
-      <a href="termen/inference.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">I</a>
-      <a href="termen/jailbreaking.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">J</a>
-      <a href="termen/kennisgraaf.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">K</a>
-      <a href="termen/llm.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">L</a>
-      <a href="termen/machine-learning.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">M</a>
-      <a href="termen/neural-network.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">N</a>
-      <a href="termen/open-source-ai.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">O</a>
-      <a href="termen/parameter.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">P</a>
-      <a href="termen/quantization.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">Q</a>
-      <a href="termen/rag.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">R</a>
-<a href="termen/singularity.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">S</a>
-        <a href="termen/token.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">T</a>
-        <a href="termen/unsupervised-learning.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">U</a>
-        <a href="termen/vector-database.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">V</a>
-<a href="termen/weights.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">W</a>
-        <a href="termen/xai.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">X</a>
-        <a href="termen/yottabyte.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">Y</a>
-        <a href="termen/zero-shot-learning.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">Z</a>
+      <a href="#A" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">A</a>
+      <a href="#B" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">B</a>
+      <a href="#C" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">C</a>
+      <a href="#D" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">D</a>
+      <a href="#E" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">E</a>
+      <a href="#F" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">F</a>
+      <a href="#G" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">G</a>
+      <a href="#H" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">H</a>
+      <a href="#I" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">I</a>
+      <a href="#J" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">J</a>
+      <a href="#K" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">K</a>
+      <a href="#L" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">L</a>
+      <a href="#M" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">M</a>
+      <a href="#N" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">N</a>
+      <a href="#O" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">O</a>
+      <a href="#P" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">P</a>
+      <a href="#Q" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">Q</a>
+      <a href="#R" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">R</a>
+      <a href="#S" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">S</a>
+      <a href="#T" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">T</a>
+      <a href="#U" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">U</a>
+      <a href="#V" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">V</a>
+      <a href="#W" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">W</a>
+      <a href="#X" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">X</a>
+      <a href="#Y" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">Y</a>
+      <a href="#Z" class="letter-btn flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">Z</a>
     </nav>
-    <p class="mt-4 text-sm text-gray-500">De letters <strong>A</strong> t/m <strong>R</strong> hebben termen: <a href="termen/agentic-workflow.html" class="text-accent hover:underline">Agentic Workflow</a>, <a href="termen/bias.html" class="text-accent hover:underline">Bias</a>, <a href="termen/context-window.html" class="text-accent hover:underline">Context Window</a>, <a href="termen/deepfake.html" class="text-accent hover:underline">Deepfake</a>, <a href="termen/embeddings.html" class="text-accent hover:underline">Embeddings</a>, <a href="termen/fine-tuning.html" class="text-accent hover:underline">Fine-tuning</a>, <a href="termen/gpu.html" class="text-accent hover:underline">GPU</a>, <a href="termen/hallucinatie.html" class="text-accent hover:underline">Hallucinatie</a>, <a href="termen/inference.html" class="text-accent hover:underline">Inference</a>, <a href="termen/jailbreaking.html" class="text-accent hover:underline">Jailbreaking</a>, <a href="termen/kennisgraaf.html" class="text-accent hover:underline">Kennisgraaf</a>, <a href="termen/llm.html" class="text-accent hover:underline">LLM</a>, <a href="termen/machine-learning.html" class="text-accent hover:underline">Machine Learning</a>, <a href="termen/neural-network.html" class="text-accent hover:underline">Neural Network</a>, <a href="termen/open-source-ai.html" class="text-accent hover:underline">Open Source AI</a>, <a href="termen/parameter.html" class="text-accent hover:underline">Parameter</a>, <a href="termen/quantization.html" class="text-accent hover:underline">Quantization</a>, <a href="termen/rag.html" class="text-accent hover:underline">RAG</a>.</p>
+  </section>
+
+  <!-- Woordenboek -->
+  <section id="woordenboek" class="max-w-6xl mx-auto px-4 sm:px-6 pb-16 space-y-12">
+
+    <!-- ===== A ===== -->
+    <div id="A" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">A</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Agents / AI-agenten</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Zelfstandige AI-programma's die taken plannen, uitvoeren en bijsturen zonder dat je bij elke stap hoeft in te grijpen. Vergelijk het met een digitale medewerker die een opdracht van A tot Z afhandelt.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Workflow</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Agentic Workflow</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Een werkproces waarbij AI-agenten meerdere stappen zelfstandig uitvoeren — plannen, tools gebruiken, resultaten controleren — in een doorlopende lus totdat het doel bereikt is.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Workflow</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">API (Application Programming Interface)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">De "connector" waarmee jouw software praat met een AI-dienst. Via een API stuur je een vraag naar Claude of GPT en ontvang je automatisch een antwoord — zonder handmatig een chatvenster te openen.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">Integratie</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Automation (AI-automatisering)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Het inzetten van AI om herhalende taken — e-mails, rapportages, data-invoer — automatisch te laten uitvoeren. Bespaart tijd en vermindert fouten.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full">Productiviteit</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== B ===== -->
+    <div id="B" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">B</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Bias (vooringenomenheid)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Als een AI systematisch een kant op neigt — door scheef trainingsmateriaal. Denk aan een CV-screener die vrouwen benadeelt. Cruciaal om op te letten bij beslissings-AI.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-red-50 text-red-600 px-2 py-0.5 rounded-full">Ethiek</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Benchmark</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Een gestandaardiseerde test om AI-modellen te vergelijken. Vergelijkbaar met een rijexamen: de beste score betekent niet altijd de beste rijder voor jouw situatie.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Evaluatie</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">BaaS (Backend as a Service)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Cloud-diensten die de technische infrastructuur voor je regelen, zodat jij je focust op de AI-logica en het product — niet op servers en databases.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">Integratie</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== C ===== -->
+    <div id="C" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">C</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Context Window</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Het "werkgeheugen" van een AI-model: hoeveel tekst het tegelijk kan lezen en onthouden. Groter = meer context = betere, samenhangende antwoorden op lange documenten.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Chain of Thought (CoT)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Techniek waarbij je de AI vraagt zijn redenering stap-voor-stap te tonen. Leidt tot nauwkeurigere antwoorden op complexe problemen — alsof je een medewerker vraagt zijn werk te laten zien.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full">Prompting</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Chatbot</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Een geautomatiseerde gesprekspartner. Moderne AI-chatbots begrijpen vrije tekst en voeren echte dialogen — ver voorbij de "druk op 1 voor service" van vroeger.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Toepassing</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Computer Vision</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI die beelden en video begrijpt. Toepassingen: kwaliteitscontrole in productie, gezichtsherkenning, automatisch scannen van facturen of identiteitsdocumenten.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Toepassing</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== D ===== -->
+    <div id="D" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">D</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Deepfake</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI-gegenereerde nep-video of -audio waarbij iemands gezicht of stem realistisch wordt nagemaakt. Groot risico voor reputatieschade en fraude; bewustzijn is essentieel voor ondernemers.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-red-50 text-red-600 px-2 py-0.5 rounded-full">Risico</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Data Pipeline</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">De geautomatiseerde stroom van ruwe data naar bruikbare input voor AI: verzamelen → opschonen → transformeren → opslaan. De kwaliteit van je pipeline bepaalt de kwaliteit van je AI-output.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Data</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Deep Learning</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Geavanceerde vorm van machine learning met meerdere neurale lagen. Fundament van moderne AI: spraakherkenning, vertaling, beeldanalyse — allemaal Deep Learning.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== E ===== -->
+    <div id="E" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">E</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Embeddings</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Tekst omgezet naar getallen zodat AI conceptuele gelijkenis begrijpt. "Hond" en "puppy" komen dichter bij elkaar te liggen dan "hond" en "factuur". Basis voor slimme zoeksystemen.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">EU AI Act</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">De Europese AI-verordening (van kracht aug. 2024) die AI-systemen indeelt op risico: onacceptabel, hoog, beperkt, minimaal. Ondernemers die AI inzetten voor HR, krediet of veiligheid vallen onder strenge eisen.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full">Regelgeving</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== F ===== -->
+    <div id="F" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">F</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Fine-tuning</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Een bestaand AI-model bijtrainen op jouw eigen data zodat het jouw branche, toon en terminologie kent. Goedkoper dan een model from scratch bouwen; snel toepasbaar.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Foundation Model</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Een groot, breed getraind basismodel (zoals GPT-4 of Claude) waarop specifieke toepassingen worden gebouwd. Het fundament van de huidige AI-revolutie.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Function Calling</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI die externe tools en functies aanroept — een database doorzoeken, een e-mail sturen, een kalender updaten — als onderdeel van één gesprek. Maakt AI van gesprekspartner naar uitvoerder.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">Integratie</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== G ===== -->
+    <div id="G" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">G</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">GPU (Graphics Processing Unit)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Gespecialiseerde chip die AI-berekeningen massaal parallel uitvoert. Hoe meer GPU-kracht, hoe sneller een model traint of antwoorden geeft. Via de cloud huurbaar per uur.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Infrastructuur</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Generative AI (GenAI)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI die nieuwe content maakt: tekst, afbeeldingen, audio, video, code. Denk aan ChatGPT, Midjourney, DALL-E. De technologie achter moderne content- en codeassistenten.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Toepassing</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Guardrails</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Regels en filters die AI-output binnen gewenste grenzen houden. Zorgen dat een klantenservice-bot geen concurrenten aanbeveelt of off-topic content produceert.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-red-50 text-red-600 px-2 py-0.5 rounded-full">Veiligheid</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== H ===== -->
+    <div id="H" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">H</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Hallucinatie</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Wanneer een AI zelfverzekerd onjuiste feiten presenteert. Niet bewust liegen — het model "raadt" plausibele tekst. Altijd kritisch controleren bij feitelijke informatie.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-red-50 text-red-600 px-2 py-0.5 rounded-full">Risico</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Human-in-the-Loop (HITL)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Werkwijze waarbij mensen kritische AI-beslissingen goedkeuren voordat ze worden uitgevoerd. Balans tussen efficiëntie (AI doet het werk) en controle (mens geeft finaal akkoord).</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full">Governance</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== I ===== -->
+    <div id="I" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">I</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Inference</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Het moment dat een getraind model een antwoord genereert op jouw vraag. Training = leren; inference = toepassen. Snelheid en kosten van inference bepalen je AI-schaalstrategie.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Instruction Tuning</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Trainen van een model om instructies te volgen in plaats van alleen tekst te voorspellen. Hierdoor reageert AI op "Maak een samenvatting" in plaats van de zin af te maken.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== J ===== -->
+    <div id="J" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">J</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Jailbreaking</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Manipulatietechniek om AI-veiligheidsfilters te omzeilen. Risico voor bedrijven die AI inzetten in klantinteractie: slechte actoren kunnen jouw AI misbruiken voor schadelijke output.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-red-50 text-red-600 px-2 py-0.5 rounded-full">Veiligheid</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">JSON (data-uitwisseling)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Gestandaardiseerd formaat voor data-uitwisseling tussen AI en andere software. Als je AI-output wilt doorsturen naar je CRM of ERP, levert AI het resultaat in JSON.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">Integratie</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== K ===== -->
+    <div id="K" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">K</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Kennisgraaf (Knowledge Graph)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Een netwerk van verbonden feiten en relaties dat AI helpt contextueel te redeneren. Bedrijven zoals Google gebruiken kennisgrafen om "Wie is de CEO van X?" direct te beantwoorden.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Data</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Knowledge Base (Kennisbank)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Gestructureerde verzameling van bedrijfsdocumenten waarop een AI-assistent kan zoeken. Stel je eigen AI-assistent in die antwoord geeft op basis van jouw handleidingen, contracten en FAQ's.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full">Toepassing</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== L ===== -->
+    <div id="L" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">L</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">LLM (Large Language Model)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Een groot taalmodel getraind op enorme hoeveelheden tekst. De motor achter ChatGPT, Claude, Gemini en co. Begrijpt en genereert menselijke taal op hoog niveau.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Latency (reactietijd)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">De tijd tussen jouw verzoek en het antwoord van de AI. Kritisch voor klanttoepassingen: niemand wacht graag langer dan 2 seconden. Beïnvloedbaar door modelkeuze en infrastructuur.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Prestaties</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== M ===== -->
+    <div id="M" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">M</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Machine Learning (ML)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI die leert van data zonder expliciet geprogrammeerd te worden. Hoe meer en betere data, hoe slimmer het systeem. Fundament van voorspellende analyses en aanbevelingssystemen.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">MCP (Model Context Protocol)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Open standaard (Anthropic, 2024) waarmee AI-modellen veilig verbinding maken met externe tools en databronnen. De "USB-standaard" van AI-integraties.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">Integratie</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Multimodaal</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI die meerdere typen input verwerkt: tekst + afbeeldingen + audio + video. Praktisch: een AI die een foto van een kapot apparaat bekijkt en de reparatiestappen beschrijft.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== N ===== -->
+    <div id="N" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">N</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Neuraal Netwerk</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Computerarchitectuur geïnspireerd op het menselijk brein: lagen van verbonden "neuronen" leren patronen te herkennen. De bouwsteen van deep learning en moderne AI.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">NLP (Natural Language Processing)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Het vakgebied dat computers taal laat begrijpen en genereren. Zoekmachines, vertaaldiensten, chatbots — allemaal NLP. Basis voor vrijwel alle zakelijke AI-toepassingen.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Vakgebied</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== O ===== -->
+    <div id="O" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">O</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Open Source AI</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI-modellen waarvan de broncode vrij beschikbaar is (bijv. Llama, Mistral). Voordelen: privacy, kosten, maatwerk. Nadeel: zelf hosten en onderhouden vereist technische expertise.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Orchestration</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Het coördineren van meerdere AI-agenten en tools zodat ze samenwerken als één coherent systeem. De "projectmanager" van complexe AI-workflows.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Workflow</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">On-premise AI</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI die draait op eigen servers, niet in de cloud. Maximale privacy en controle, geschikt voor gevoelige bedrijfsdata. Hogere initiële investering, maar geen data die je bedrijf verlaat.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full">Infrastructuur</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== P ===== -->
+    <div id="P" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">P</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Parameter</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">De instelbare waarden die een model tijdens training leert. Meer parameters = meer capaciteit. GPT-4 heeft ~1 biljoen parameters; een model met meer parameters is niet altijd beter voor jouw taak.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Prompt</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">De instructie of vraag die jij aan een AI geeft. Kwaliteit van de prompt bepaalt kwaliteit van het antwoord. "Schrijf een e-mail" werkt minder goed dan "Schrijf een zakelijke follow-up in 3 zinnen voor prospect X."</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full">Prompting</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Prompt Engineering</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">De kunst en wetenschap van het ontwerpen van effectieve AI-instructies. Goede prompt engineers zijn schaars en waardevol — het is de "nieuwe Excel-vaardigheid" voor kenniswerkers.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full">Prompting</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Predictive Analytics</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI die historische data gebruikt om toekomstige uitkomsten te voorspellen: omzet, klantverloop, voorraadbehoeften. Geeft ondernemers een datagedreven voorsprong op de concurrentie.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Toepassing</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== Q ===== -->
+    <div id="Q" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">Q</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Quantization</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Techniek om AI-modellen kleiner en sneller te maken door de precisie van getallen te reduceren. Maakt krachtige modellen draaibaar op gewone hardware of smartphones.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Infrastructuur</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== R ===== -->
+    <div id="R" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-accent">R</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">RAG (Retrieval-Augmented Generation)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Techniek waarbij AI eerst jouw bedrijfsdocumenten doorzoekt vóórdat het antwoord genereert. Resultaat: betrouwbare, actuele antwoorden op basis van jouw eigen data — zonder dure fine-tuning.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Workflow</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">RLHF (Reinforcement Learning from Human Feedback)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Trainingmethode waarbij mensen AI-antwoorden beoordelen om het model te sturen naar betere, veiligere output. Hoe ChatGPT en Claude "vriendelijk" en "behulpzaam" zijn geworden.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">ROI van AI</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Return on Investment van AI-investeringen. Meet besparing in uren, omzetgroei door personalisatie, of foutreductie. Kwantificeer altijd de impact om AI-projecten intern te rechtvaardigen.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">Business</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== S ===== -->
+    <div id="S" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-blue-600">S</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Singularity</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Het hypothetische moment waarop AI menselijke intelligentie overtreft en zichzelf blijft verbeteren. Theoretisch concept — praktisch relevant als kader voor langetermijn AI-strategie.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Theorie</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">System Prompt</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Verborgen instructies die je meegeeft aan een AI-toepassing om gedrag, toon en beperkingen in te stellen. De "bedrijfshandleiding" die jouw AI-assistent vormt voordat een klant iets typt.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full">Prompting</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Supervised Learning</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Machine learning waarbij het model traint op gelabelde voorbeelden (input + juist antwoord). Basis van spamfilters, kredietscoring en beeldclassificatie.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">SaaS AI (AI-als-dienst)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI-functionaliteit aangeboden als abonnementsdienst, direct inzetbaar zonder technische kennis. Denk aan AI-schrijftools, analyse-dashboards, klantenservice-bots met maandelijkse fee.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">Business</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== T ===== -->
+    <div id="T" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-blue-600">T</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Token</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">De basiseenheid die AI verwerkt: ongeveer ¾ woord in het Engels. AI-kosten worden gemeten in tokens. 1.000 tokens ≈ 750 woorden. Begrijp tokens om AI-kosten te beheersen.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Tokenization</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Het opdelen van tekst in tokens voordat het model de input verwerkt. Bepaalt hoe "lang" een document is voor de AI — relevant voor contextvenster en kostenbeheer.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Transfer Learning</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Kennis van een groot getraind model overzetten naar een specifiekere taak. Zo kun je met weinig data en budget een gespecialiseerde AI bouwen, voortbouwend op miljoenen trainingsuren van anderen.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Temperature (temperatuur)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Instelling die de creativiteit van AI-output regelt. Lage temperatuur = voorspelbaar en precies (goed voor code en contracten). Hoge temperatuur = creatiever maar minder voorspelbaar (goed voor brainstorm).</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full">Prompting</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== U ===== -->
+    <div id="U" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-blue-600">U</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Unsupervised Learning</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Machine learning op ongelabelde data — het model ontdekt zelf patronen en clusters. Nuttig voor klantgroepering, anomaliedetectie en marktsegmentatie zonder vooraf handmatig labelen.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Use Case</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Een concrete toepassing van AI voor een specifiek bedrijfsprobleem. Definieer altijd een scherpe use case voordat je investeert: "AI voor klantenservice" is te breed; "AI beantwoordt 80% retourvragen automatisch" is concreet.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">Business</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== V ===== -->
+    <div id="V" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-blue-600">V</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Vector Database</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Database die embeddings opslaat en razendsnel semantisch zoekt. De ruggengraat van RAG-systemen: jouw AI-assistent vindt in milliseconden de meest relevante bedrijfsdocumenten.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Data</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Vision AI</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI die visuele informatie interpreteert uit afbeeldingen, video of camera's. Praktisch in: kwaliteitscontrole, beveiligingssystemen, automatisch verwerken van foto's van bonnetjes of schadeformulieren.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Toepassing</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== W ===== -->
+    <div id="W" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-blue-600">W</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Weights (gewichten)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">De geleerde waarden in een neuraal netwerk — het "geheugen" van het model. Een model downloaden = zijn gewichten downloaden. Goed bewaard als intellectueel eigendom.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Webhook</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Automatische notificatie van systeem A naar systeem B bij een gebeurtenis. Combineer webhooks met AI: zodra een klant een formulier invult, trigger je een AI-analyse en e-mailreactie.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">Integratie</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Workflow Automation</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Het automatiseren van bedrijfsprocessen via AI + tools. Platforms zoals Make, n8n of Zapier combineren AI-modellen met honderden apps tot krachtige, codeervrije workflows.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full">Productiviteit</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== X ===== -->
+    <div id="X" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-blue-600">X</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">XAI (Explainable AI)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI die zijn beslissingen uitlegt in voor mensen begrijpelijke termen. Essentieel voor compliance (EU AI Act), vertrouwen bij klanten en het debuggen van foute AI-besluiten.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full">Regelgeving</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== Y ===== -->
+    <div id="Y" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-blue-600">Y</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Yottabyte</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">10²⁴ bytes — de schaal waarop de wereld data genereert. AI-modellen zijn getraind op een fractie hiervan. Illustreert waarom datakwaliteit boven datakwantiteit gaat voor zakelijke AI-projecten.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Data</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Yield Optimization (AI)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI inzetten om output te maximaliseren — hogere opbrengst, minder verspilling. Toepassingen: dynamische prijsstelling, energiebeheer, voorraadbeheer, advertentiebudgetten.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full">Business</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== Z ===== -->
+    <div id="Z" class="letter-anchor">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-4xl font-bold text-blue-600">Z</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Zero-shot Learning</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">AI voert een taak uit zonder voorbeelden te hebben gezien. Krachtig voor ondernemers: je kunt een model nieuwe categorieën laten herkennen zonder dure herinstructie.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-blue-50 text-accent px-2 py-0.5 rounded-full">Model</span>
+        </div>
+
+        <div class="term-card bg-white rounded-xl border border-gray-200 p-5">
+          <h3 class="font-bold text-gray-900 text-base mb-1">Zero-trust (AI-beveiliging)</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Beveiligingsprincipe: vertrouw niets automatisch — ook geen AI-gegenereerde data. Verifieer altijd bronnen en rechten. Cruciaal wanneer AI toegang heeft tot gevoelige bedrijfssystemen.</p>
+          <span class="mt-3 inline-block text-xs font-semibold bg-red-50 text-red-600 px-2 py-0.5 rounded-full">Veiligheid</span>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Stats bar -->
+  <section class="bg-white border-t border-gray-200 py-8 mt-4">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-3xl font-bold text-accent">52+</div>
+          <div class="text-sm text-gray-500 mt-1">AI-begrippen</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-accent">A–Z</div>
+          <div class="text-sm text-gray-500 mt-1">Volledig alfabet</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-accent">6</div>
+          <div class="text-sm text-gray-500 mt-1">Categorieën</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-accent">100%</div>
+          <div class="text-sm text-gray-500 mt-1">Gericht op ondernemers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legend -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <h3 class="text-sm font-semibold text-gray-700 mb-3">Categorieën</h3>
+    <div class="flex flex-wrap gap-2">
+      <span class="text-xs font-semibold bg-blue-50 text-accent px-2.5 py-1 rounded-full">Model / Technologie</span>
+      <span class="text-xs font-semibold bg-purple-50 text-purple-700 px-2.5 py-1 rounded-full">Prompting</span>
+      <span class="text-xs font-semibold bg-green-50 text-green-700 px-2.5 py-1 rounded-full">Integratie / Business</span>
+      <span class="text-xs font-semibold bg-red-50 text-red-600 px-2.5 py-1 rounded-full">Risico / Veiligheid</span>
+      <span class="text-xs font-semibold bg-yellow-50 text-yellow-700 px-2.5 py-1 rounded-full">Regelgeving</span>
+      <span class="text-xs font-semibold bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full">Infrastructuur / Data</span>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="mt-auto bg-white border-t border-gray-200/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 text-center text-sm text-gray-500">
-      <p>AI & Agentic Workflow ABC — AI begrijpelijk voor iedereen.</p>
+      <p>AI & Agentic Workflow ABC — AI begrijpelijk voor iedereen. &copy; 2025</p>
     </div>
   </footer>
+
+  <script>
+    // Smooth scroll highlight for letter buttons
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.letter-btn').forEach(btn => btn.classList.remove('active'));
+          const id = entry.target.id;
+          const btn = document.querySelector(`.letter-btn[href="#${id}"]`);
+          if (btn) btn.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+
+    document.querySelectorAll('.letter-anchor').forEach(el => observer.observe(el));
+  </script>
+
 </body>
 </html>
