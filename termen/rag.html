@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAG (Retrieval-Augmented Generation) — AI & Agentic Workflow ABC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: { DEFAULT: '#2563eb', light: '#3b82f6', dark: '#1d4ed8' },
+            surface: { DEFAULT: '#f8fafc', dark: '#f1f5f9' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="bg-surface text-gray-800 antialiased min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-200/80 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+      <a href="../index.html" class="text-xl font-bold text-accent tracking-tight">AI & Agentic Workflow ABC</a>
+      <nav class="flex items-center gap-4">
+        <a href="../index.html" class="text-sm text-gray-600 hover:text-accent font-medium">Home</a>
+        <a href="../index.html#alfabet" class="text-sm text-gray-600 hover:text-accent font-medium">Alfabet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12 flex-1">
+    <!-- Breadcrumb -->
+    <nav class="mb-6 text-sm text-gray-500" aria-label="Breadcrumb">
+      <a href="../index.html" class="hover:text-accent">Home</a>
+      <span class="mx-2">/</span>
+      <a href="../index.html#alfabet" class="hover:text-accent">Termen</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800 font-medium">RAG (Retrieval-Augmented Generation)</span>
+    </nav>
+
+    <article>
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">RAG (Retrieval-Augmented Generation)</h1>
+      <p class="mt-2 text-lg text-gray-600">Een techniek waarbij de AI eerst in jouw eigen documenten zoekt naar feiten voordat hij een antwoord formuleert, om liegen (hallucinaties) te voorkomen.</p>
+
+      <!-- Voor dummies: korte definitie -->
+      <section class="mt-8">
+        <h2 class="text-xl font-semibold text-gray-900 border-b border-accent/30 pb-2">In het kort (voor dummies)</h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          <strong>RAG</strong> (Retrieval-Augmented Generation) betekent: eerst <em>ophalen</em> (retrieval) van relevante informatie uit een vaste bron — bijvoorbeeld je eigen documenten, een kennisbank of het web — en daarna pas het <em>genereren</em> (generation) van een antwoord door het taalmodel. Het model krijgt die opgehaalde teksten als extra context mee bij de vraag. Daardoor baseert het zijn antwoord op echte, actuele bronnen in plaats van alleen op wat het tijdens de training heeft geleerd. Dat vermindert hallucinaties en maakt antwoorden beter controleerbaar en up-to-date.
+        </p>
+      </section>
+
+      <!-- Analogie -->
+      <section class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 border-b border-accent/30 pb-2">Een analogie</h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Stel je een student voor die voor een vraag niet alleen uit zijn hoofd leert, maar eerst even een betrouwbaar studieboek openslaat om het exacte antwoord op te zoeken. Hij combineert wat hij al weet met wat er letterlijk in het boek staat, en formuleert dan zijn antwoord. RAG doet hetzelfde met een AI: in plaats van alleen te vertrouwen op wat het model “weet” (en dus kan verzinnen), zoekt het eerst in jouw documenten of database naar de relevante passages en gebruikt die als basis voor het antwoord. Zo wordt de AI minder een gokker en meer een antwoordmachine die op feiten uit jouw eigen bronnen steunt.
+        </p>
+      </section>
+
+      <!-- Uitgebreide uitleg -->
+      <section class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 border-b border-accent/30 pb-2">Uitgebreide uitleg</h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Een typische RAG-pijplijn: (1) documenten worden opgeslagen en geïndexeerd (vaak in stukken en als embeddings voor semantisch zoeken); (2) bij een gebruikersvraag worden de meest relevante stukken opgehaald (retrieval); (3) die stukken worden samen met de vraag aan het taalmodel gegeven; (4) het model genereert een antwoord op basis van die context. Retrieval kan keyword-based of embedding-based zijn; soms wordt ook een kennisgraaf gebruikt. RAG wordt veel ingezet voor bedrijfsassistenten, helpdesks en alles waar antwoorden op actuele, interne informatie moeten steunen zonder het model telkens opnieuw te trainen.
+        </p>
+      </section>
+
+      <!-- Zie ook -->
+      <section class="mt-10 p-6 bg-white rounded-xl border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900 border-b border-accent/30 pb-2">Zie ook</h2>
+        <ul class="mt-4 space-y-2 text-gray-700">
+          <li><a href="../index.html#alfabet" class="text-accent hover:underline font-medium">Alfabet-overzicht</a> — alle termen van A tot Z</li>
+          <li><a href="../index.html" class="text-accent hover:underline font-medium">Home</a> — terug naar de startpagina</li>
+          <li><a href="agentic-workflow.html" class="text-accent hover:underline font-medium">Agentic Workflow (A)</a></li>
+          <li><a href="embeddings.html" class="text-accent hover:underline font-medium">Embeddings (E)</a></li>
+          <li><a href="hallucinatie.html" class="text-accent hover:underline font-medium">Hallucinatie (H)</a></li>
+          <li><a href="kennisgraaf.html" class="text-accent hover:underline font-medium">Kennisgraaf (K)</a></li>
+          <li><a href="llm.html" class="text-accent hover:underline font-medium">LLM (L)</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-auto bg-white border-t border-gray-200/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 text-center text-sm text-gray-500">
+      <p><a href="../index.html" class="text-accent hover:underline">AI & Agentic Workflow ABC</a> — AI begrijpelijk voor iedereen.</p>
+    </div>
+  </footer>
+</body>
+</html>

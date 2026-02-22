@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI & Agentic Workflow ABC — AI begrijpelijk voor iedereen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: { DEFAULT: '#2563eb', light: '#3b82f6', dark: '#1d4ed8' },
+            surface: { DEFAULT: '#f8fafc', dark: '#f1f5f9' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="bg-surface text-gray-800 antialiased min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-200/80 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+      <a href="index.html" class="text-xl font-bold text-accent tracking-tight">AI & Agentic Workflow ABC</a>
+      <nav class="flex items-center gap-1 sm:gap-2" aria-label="Alfabetnavigatie">
+        <a href="index.html#alfabet" class="text-sm text-gray-600 hover:text-accent font-medium">Alfabet</a>
+        <a href="termen/agentic-workflow.html" class="text-sm text-gray-600 hover:text-accent font-medium">Termen</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-white border-b border-gray-200/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight">
+        AI begrijpelijk maken voor iedereen
+      </h1>
+      <p class="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl leading-relaxed">
+        Welkom bij het AI & Agentic Workflow ABC. Hier vind je heldere uitleg van begrippen rond kunstmatige intelligentie en agent-gebaseerde workflows — zonder jargon, met voorbeelden en analogieën.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="index.html#alfabet" class="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white font-medium rounded-lg hover:bg-accent-dark transition-colors">
+          Bekijk het alfabet
+        </a>
+        <a href="termen/agentic-workflow.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-dark text-gray-700 font-medium rounded-lg border border-gray-200 hover:border-accent hover:text-accent transition-colors">
+          Agentic Workflow (A)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alphabet navigation -->
+  <section id="alfabet" class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+    <h2 class="text-xl font-semibold text-gray-900 mb-4">Termen per letter</h2>
+    <p class="text-gray-600 mb-6 max-w-2xl">Kies een letter om termen te bekijken. Nieuwe termen worden regelmatig toegevoegd.</p>
+    <nav class="flex flex-wrap gap-2 sm:gap-3" aria-label="Alfabet A–Z">
+      <a href="termen/agentic-workflow.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">A</a>
+      <a href="termen/bias.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">B</a>
+      <a href="termen/context-window.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">C</a>
+      <a href="termen/deepfake.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">D</a>
+      <a href="termen/embeddings.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">E</a>
+      <a href="termen/fine-tuning.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">F</a>
+      <a href="termen/gpu.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">G</a>
+      <a href="termen/hallucinatie.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">H</a>
+      <a href="termen/inference.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">I</a>
+      <a href="termen/jailbreaking.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">J</a>
+      <a href="termen/kennisgraaf.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">K</a>
+      <a href="termen/llm.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">L</a>
+      <a href="termen/machine-learning.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">M</a>
+      <a href="termen/neural-network.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">N</a>
+      <a href="termen/open-source-ai.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">O</a>
+      <a href="termen/parameter.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">P</a>
+      <a href="termen/quantization.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">Q</a>
+      <a href="termen/rag.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-dark transition-colors shadow-sm">R</a>
+<a href="termen/singularity.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">S</a>
+        <a href="termen/token.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">T</a>
+        <a href="termen/unsupervised-learning.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">U</a>
+        <a href="termen/vector-database.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">V</a>
+<a href="termen/weights.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">W</a>
+        <a href="termen/xai.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">X</a>
+        <a href="termen/yottabyte.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">Y</a>
+        <a href="termen/zero-shot-learning.html" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm">Z</a>
+    </nav>
+    <p class="mt-4 text-sm text-gray-500">De letters <strong>A</strong> t/m <strong>R</strong> hebben termen: <a href="termen/agentic-workflow.html" class="text-accent hover:underline">Agentic Workflow</a>, <a href="termen/bias.html" class="text-accent hover:underline">Bias</a>, <a href="termen/context-window.html" class="text-accent hover:underline">Context Window</a>, <a href="termen/deepfake.html" class="text-accent hover:underline">Deepfake</a>, <a href="termen/embeddings.html" class="text-accent hover:underline">Embeddings</a>, <a href="termen/fine-tuning.html" class="text-accent hover:underline">Fine-tuning</a>, <a href="termen/gpu.html" class="text-accent hover:underline">GPU</a>, <a href="termen/hallucinatie.html" class="text-accent hover:underline">Hallucinatie</a>, <a href="termen/inference.html" class="text-accent hover:underline">Inference</a>, <a href="termen/jailbreaking.html" class="text-accent hover:underline">Jailbreaking</a>, <a href="termen/kennisgraaf.html" class="text-accent hover:underline">Kennisgraaf</a>, <a href="termen/llm.html" class="text-accent hover:underline">LLM</a>, <a href="termen/machine-learning.html" class="text-accent hover:underline">Machine Learning</a>, <a href="termen/neural-network.html" class="text-accent hover:underline">Neural Network</a>, <a href="termen/open-source-ai.html" class="text-accent hover:underline">Open Source AI</a>, <a href="termen/parameter.html" class="text-accent hover:underline">Parameter</a>, <a href="termen/quantization.html" class="text-accent hover:underline">Quantization</a>, <a href="termen/rag.html" class="text-accent hover:underline">RAG</a>.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-auto bg-white border-t border-gray-200/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 text-center text-sm text-gray-500">
+      <p>AI & Agentic Workflow ABC — AI begrijpelijk voor iedereen.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inference (Afleiding) — AI & Agentic Workflow ABC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: { DEFAULT: '#2563eb', light: '#3b82f6', dark: '#1d4ed8' },
+            surface: { DEFAULT: '#f8fafc', dark: '#f1f5f9' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="bg-surface text-gray-800 antialiased min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-200/80 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+      <a href="../index.html" class="text-xl font-bold text-accent tracking-tight">AI & Agentic Workflow ABC</a>
+      <nav class="flex items-center gap-4">
+        <a href="../index.html" class="text-sm text-gray-600 hover:text-accent font-medium">Home</a>
+        <a href="../index.html#alfabet" class="text-sm text-gray-600 hover:text-accent font-medium">Alfabet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12 flex-1">
+    <!-- Breadcrumb -->
+    <nav class="mb-6 text-sm text-gray-500" aria-label="Breadcrumb">
+      <a href="../index.html" class="hover:text-accent">Home</a>
+      <span class="mx-2">/</span>
+      <a href="../index.html#alfabet" class="hover:text-accent">Termen</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800 font-medium">Inference (Afleiding)</span>
+    </nav>
+
+    <article>
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Inference (Afleiding)</h1>
+      <p class="mt-2 text-lg text-gray-600">Het moment dat een getraind AI-model daadwerkelijk gebruikt wordt om een antwoord te genereren of een voorspelling te doen.</p>
+
+      <!-- Voor dummies: korte definitie -->
+      <section class="mt-8">
+        <h2 class="text-xl font-semibold text-gray-900 border-b border-accent/30 pb-2">In het kort (voor dummies)</h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          <strong>Inference</strong> (afleiding) is de fase waarin een AI-model dat al is getraind, in gebruik wordt genomen: je stelt een vraag of geeft input, en het model produceert een antwoord of voorspelling. Er wordt niet meer “geleerd”; de parameters van het model staan vast. Het is het moment waarop alle training zijn nut bewijst: het model past wat het heeft geleerd toe op nieuwe, nog niet geziene gegevens. Elke keer dat je ChatGPT een vraag stelt of een aanbevelingssysteem iets voorstelt, vindt inference plaats.
+        </p>
+      </section>
+
+      <!-- Analogie -->
+      <section class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 border-b border-accent/30 pb-2">Een analogie</h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          De student heeft hard geleerd (training) en zit nu in de klas om de vragen van het examen te beantwoorden (inference). Tijdens het examen verwerkt hij geen nieuwe stof meer; hij gebruikt wat hij al weet om de vragen te beantwoorden. Zo werkt inference bij AI: het model is klaar met leren en wordt nu ingezet om op nieuwe vragen of data een antwoord te geven. Training = leren; inference = toepassen wat je hebt geleerd.
+        </p>
+      </section>
+
+      <!-- Uitgebreide uitleg -->
+      <section class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 border-b border-accent/30 pb-2">Uitgebreide uitleg</h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Tijdens inference worden de gewichten van het getrainde model niet meer aangepast. De input (vraag, beeld, sensorwaarde) stroomt door het netwerk, en het model produceert een uitvoer: tekst, een label, een getal, enzovoort. Inference kan op een server, in de cloud, op een telefoon of op een edge device plaatsvinden. Snelheid en kosten van inference zijn belangrijk: hoe meer gebruikers tegelijk vragen stellen, hoe meer rekenkracht er nodig is. Optimalisaties (kleinere modellen, quantisatie, speciale hardware) richten zich vaak op het sneller en goedkoper maken van inference.
+        </p>
+      </section>
+
+      <!-- Zie ook -->
+      <section class="mt-10 p-6 bg-white rounded-xl border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900 border-b border-accent/30 pb-2">Zie ook</h2>
+        <ul class="mt-4 space-y-2 text-gray-700">
+          <li><a href="../index.html#alfabet" class="text-accent hover:underline font-medium">Alfabet-overzicht</a> — alle termen van A tot Z</li>
+          <li><a href="../index.html" class="text-accent hover:underline font-medium">Home</a> — terug naar de startpagina</li>
+          <li><a href="fine-tuning.html" class="text-accent hover:underline font-medium">Fine-tuning (F)</a></li>
+          <li><a href="gpu.html" class="text-accent hover:underline font-medium">GPU (G)</a></li>
+          <li><a href="llm.html" class="text-accent hover:underline font-medium">LLM (L)</a></li>
+          <li><a href="machine-learning.html" class="text-accent hover:underline font-medium">Machine Learning (M)</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-auto bg-white border-t border-gray-200/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 text-center text-sm text-gray-500">
+      <p><a href="../index.html" class="text-accent hover:underline">AI & Agentic Workflow ABC</a> — AI begrijpelijk voor iedereen.</p>
+    </div>
+  </footer>
+</body>
+</html>
