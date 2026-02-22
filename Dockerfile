@@ -1,12 +1,4 @@
 FROM nginx:alpine
-
-# Verwijder eerst de standaard Google/Nginx bestanden
-RUN rm -rf /usr/share/nginx/html/*
-
-# Kopieer nu jouw eigen bestanden naar de server
-COPY . /usr/share/nginx/html
-
-# Zet de poort naar 8080 voor Google Cloud
-RUN sed -i 's/listen[[:space:]]*80;/listen 8080;/g' /etc/nginx/conf.d/default.conf
-
+COPY index.html /usr/share/nginx/html/index.html
 EXPOSE 8080
+CMD ["nginx", "-g", "daemon off;"]
